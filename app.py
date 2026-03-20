@@ -14,5 +14,3 @@ def call():
 @app.route("/hello")
 def hello():
     return "Helllo po"
-if __name__ == "__main__":
-    app.run(port=80)
