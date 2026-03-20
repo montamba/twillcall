@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/call", methods=["GET", "POST"])
 def call():
     res = VoiceResponse()
-    gather = Gather(input="speech")
+    gather = Gather(input="speech",timeout=180)
     gather.say("Hello, this is a test")
     res.append(gather)
     return str(res)
